@@ -1,0 +1,31 @@
+[{
+    "text": "客户经理",
+    "cls": "folder",
+    "children": [{
+        "text": "管理",
+        "leaf": true
+    },{
+        "text": "新增",
+        "leaf": true
+    }]
+},{
+    "text": "月份业绩及提成",
+    "cls": "folder",
+    "children": [{
+        "text": "查询业绩",
+        "leaf": true
+    },{
+        "text": "查询提成",
+        "leaf": true
+    }]
+},{
+    "text": "绩效方案维护",
+    "cls": "folder",
+    "children": [{
+        "text": "管理",
+        "leaf": true
+    },{
+        "text": "新增",
+        "leaf": true
+    }]
+}]

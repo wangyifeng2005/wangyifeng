@@ -1,0 +1,31 @@
+/**
+ * ClassName 部门实体数据集
+ */
+Ext.define("AM.store.ManagerStore",{
+	extend:'Ext.data.Store',
+	model:'AM.model.ManagerModel',
+	pageSize: 15, 
+	proxy:{
+//		api:{
+//			update:'/ext4Demo/extjs!updateDeptList.action',
+//			remove:'/ext4Demo/extjs!removeDeptList.action'
+//		},
+		type:'ajax',
+		url:'manager.jsp',
+		reader:{
+			type:'json',
+			root:'items'
+		},
+		writer:{
+			type:'json'
+		}
+	},
+//	data:{"total":100,items:[
+//		{id:1,managerId:'001',managerName:'managerName1',empTime:'2010-02-11',managerGrade:'高级',basicSalary:'5000',subsidy:'500',performanceList:'A+,B+,C'},
+//		{id:2,managerId:'002',managerName:'managerName2',empTime:'2010-02-11',managerGrade:'高级见习',basicSalary:'4000',subsidy:'500',performanceList:'A,B,C'},
+//		{id:3,managerId:'003',managerName:'managerName3',empTime:'2010-02-11',managerGrade:'见习',basicSalary:'2000',subsidy:'500',performanceList:'A,B,C'},
+//		{id:4,managerId:'004',managerName:'managerName4',empTime:'2010-02-11',managerGrade:'客户经理',basicSalary:'3000',subsidy:'500',performanceList:'A,B,C'},
+//		{id:5,managerId:'005',managerName:'managerName5',empTime:'2010-02-11',managerGrade:'高级',basicSalary:'5000',subsidy:'500',performanceList:'A+,B+,C'}
+//	]},
+	autoLoad:true
+});

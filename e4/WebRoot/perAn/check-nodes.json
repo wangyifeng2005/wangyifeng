@@ -1,0 +1,11 @@
+{children:[
+{id:'01',text:'a01',children:[
+{id:'01-01',text:'a01-01',leaf:true},
+{id:'01-02',text:'a01-02',children:[
+{id:'01-02-01',text:'b01-02-01',leaf:true},
+{id:'01-02-02',text:'a01-02-02',leaf:true}
+]},
+{id:'01-03',text:'b01-03',leaf:true}
+]},
+{id:'02',text:'b02',leaf:true}
+]}

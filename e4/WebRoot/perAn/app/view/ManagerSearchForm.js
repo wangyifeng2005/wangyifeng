@@ -1,0 +1,27 @@
+Ext.define("AM.view.ManagerSearchForm",{
+	extend:'Ext.form.Panel',
+	alias:'widget.managerSearchForm',
+    //title: '按条件搜索',
+    width: '100%',
+    height:'20%',
+    height:40,
+    defaultType: 'textfield',
+    frame: true,
+    method: 'POST',
+    //collapsible: true,//可折叠
+    bodyPadding: 5,
+    layout: 'column',
+    //margin: '0 0 10 0',
+    items: [{
+        fieldLabel: '姓名',
+        labelWidth: 30,
+        width:130,
+        id: 'managerName',
+        name:'managerName'
+    }, {
+        xtype: 'button',
+        id:'search',
+        text: '查询',
+        margin: '0 0 0 10'
+    }]
+})

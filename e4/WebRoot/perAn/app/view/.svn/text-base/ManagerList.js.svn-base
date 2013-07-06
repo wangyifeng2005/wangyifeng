@@ -1,0 +1,83 @@
+Ext.define("AM.view.ManagerList",{
+	extend:'Ext.grid.Panel',
+	alias:'widget.managerlist',
+	store:'ManagerStore',
+	width:'90%',
+	height:'100%',
+	selModel:{
+		selType:'checkboxmodel'
+	},
+	border:0,
+	multiSelect: true,
+	frame:true,
+	tbar:[
+		{xtype:'button',text:'添加',id:'add',iconCls:'table_add'},
+		{xtype:'button',text:'删除',id:'delete',iconCls:'table_remove'},
+		{xtype:'button',text:'保存',id:'save',iconCls:'table_save'}
+	],
+	dockedItems:[{
+		xtype:'pagingtoolbar',
+		store:'ManagerStore',
+		dock:'bottom',
+		displayInfo:true
+	}],
+    enableKeyNav:true,
+	columnLines: true,
+	columns:[
+		{text:'客户经理编号',dataIndex:'managerId',width:100,
+			field:{
+				xtype:'textfield',
+				allowBlank:false
+			}
+		},
+		{text:'姓名',dataIndex:'managerName',width:100,
+			field:{
+				xtype:'textfield',
+				allowBlank:false
+			}		
+		},
+		{text:'入职时间',dataIndex:'empTime',width:100,
+			field:{
+				xtype:'textfield',
+				allowBlank:false
+			}
+		},
+		{text:'级别',dataIndex:'managerGrade',width:100,
+			field:{
+				xtype:'textfield',
+				allowBlank:false
+			}
+		},
+		{text:'底薪',dataIndex:'basicSalary',width:100,
+			field:{
+				xtype:'textfield',
+				allowBlank:false
+			}
+		},
+		{text:'补助',dataIndex:'subsidy',width:100,
+			field:{
+				xtype:'textfield',
+				allowBlank:false
+			}
+		},
+		{text:'绩效列表',dataIndex:'performanceList',width:100,
+			field:{
+				xtype:'textfield',
+				allowBlank:false
+			}
+		}
+	],
+	plugins:[
+		Ext.create("Ext.grid.plugin.CellEditing",{
+			clicksToEdit : 2
+		})
+	],
+	initComponent:function(){
+		this.callParent(arguments)
+	}
+});
+
+
+
+
+
